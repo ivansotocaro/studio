@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "airline": "AviaSim Airlines",
+    "flightNumber": "AS101",
+    "origin": "BOG",
+    "destination": "JFK",
+    "date": "2024-10-15",
+    "departureTime": "08:00",
+    "arrivalTime": "13:00",
+    "price": 450,
+    "duration": "5h 00m"
+  },
+  {
+    "id": 2,
+    "airline": "AviaSim Airlines",
+    "flightNumber": "AS102",
+    "origin": "JFK",
+    "destination": "BOG",
+    "date": "2024-10-20",
+    "departureTime": "15:00",
+    "arrivalTime": "20:00",
+    "price": 420,
+    "duration": "5h 00m"
+  },
+  {
+    "id": 3,
+    "airline": "Sky Connect",
+    "flightNumber": "SC205",
+    "origin": "BOG",
+    "destination": "MIA",
+    "date": "2024-10-15",
+    "departureTime": "10:30",
+    "arrivalTime": "14:00",
+    "price": 280,
+    "duration": "3h 30m"
+  },
+  {
+    "id": 4,
+    "airline": "Sky Connect",
+    "flightNumber": "SC206",
+    "origin": "MIA",
+    "destination": "BOG",
+    "date": "2024-10-22",
+    "departureTime": "16:00",
+    "arrivalTime": "19:30",
+    "price": 295,
+    "duration": "3h 30m"
+  },
+  {
+    "id": 5,
+    "airline": "AviaSim Airlines",
+    "flightNumber": "AS300",
+    "origin": "MAD",
+    "destination": "BCN",
+    "date": "2024-10-16",
+    "departureTime": "09:00",
+    "arrivalTime": "10:15",
+    "price": 90,
+    "duration": "1h 15m"
+  },
+  {
+    "id": 6,
+    "airline": "AviaSim Airlines",
+    "flightNumber": "AS301",
+    "origin": "BCN",
+    "destination": "MAD",
+    "date": "2024-10-16",
+    "departureTime": "12:00",
+    "arrivalTime": "13:15",
+    "price": 85,
+    "duration": "1h 15m"
+  },
+  {
+    "id": 7,
+    "airline": "Aerojet",
+    "flightNumber": "AJ550",
+    "origin": "JFK",
+    "destination": "LAX",
+    "date": "2024-10-18",
+    "departureTime": "11:00",
+    "arrivalTime": "14:30",
+    "price": 350,
+    "duration": "6h 30m"
+  },
+  {
+    "id": 8,
+    "airline": "Aerojet",
+    "flightNumber": "AJ551",
+    "origin": "LAX",
+    "destination": "JFK",
+    "date": "2024-10-25",
+    "departureTime": "09:00",
+    "arrivalTime": "17:30",
+    "price": 360,
+    "duration": "5h 30m"
+  },
+  {
+    "id": 9,
+    "airline": "Sky Connect",
+    "flightNumber": "SC818",
+    "origin": "BOG",
+    "destination": "MAD",
+    "date": "2024-10-15",
+    "departureTime": "21:00",
+    "arrivalTime": "13:00",
+    "price": 850,
+    "duration": "9h 00m"
+  },
+  {
+    "id": 10,
+    "airline": "Sky Connect",
+    "flightNumber": "SC819",
+    "origin": "MAD",
+    "destination": "BOG",
+    "date": "2024-10-28",
+    "departureTime": "15:00",
+    "arrivalTime": "19:00",
+    "price": 820,
+    "duration": "9h 00m"
+  }
+]
