@@ -8,6 +8,8 @@ import { useToast } from "@/hooks/use-toast"
 interface CartContextType {
   cart: Flight[];
   addToCart: (flight: Flight) => void;
+  removeFromCart: (flightId: number) => void;
+  clearCart: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -20,27 +22,39 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart((prevCart) => {
         const isAlreadyInCart = prevCart.some(item => item.id === flight.id);
         if (isAlreadyInCart) {
-            setTimeout(() => {
-              toast({
-                title: "Vuelo ya en el carrito",
-                description: "Este vuelo ya ha sido agregado a tu reserva.",
-                variant: "destructive",
-              })
-            }, 0);
+            toast({
+              title: "Vuelo ya en el carrito",
+              description: "Este vuelo ya ha sido agregado a tu reserva.",
+              variant: "destructive",
+            })
             return prevCart;
         }
-        setTimeout(() => {
-          toast({
-            title: "¡Vuelo agregado!",
-            description: "Tu vuelo ha sido añadido a la reserva.",
-          })
-        }, 0);
+        toast({
+          title: "¡Vuelo agregado!",
+          description: "Tu vuelo ha sido añadido a la reserva.",
+        })
         return [...prevCart, flight]
     });
   };
 
+  const removeFromCart = (flightId: number) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== flightId));
+    toast({
+        title: "Vuelo eliminado",
+        description: "El vuelo ha sido eliminado de tu reserva.",
+      })
+  };
+
+  const clearCart = () => {
+    setCart([]);
+    toast({
+        title: "Cesta vaciada",
+        description: "Todos los vuelos han sido eliminados de tu reserva.",
+      })
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
