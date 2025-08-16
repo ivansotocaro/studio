@@ -20,17 +20,21 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setCart((prevCart) => {
         const isAlreadyInCart = prevCart.some(item => item.id === flight.id);
         if (isAlreadyInCart) {
-            toast({
-              title: "Vuelo ya en el carrito",
-              description: "Este vuelo ya ha sido agregado a tu reserva.",
-              variant: "destructive",
-            })
+            setTimeout(() => {
+              toast({
+                title: "Vuelo ya en el carrito",
+                description: "Este vuelo ya ha sido agregado a tu reserva.",
+                variant: "destructive",
+              })
+            }, 0);
             return prevCart;
         }
-        toast({
-          title: "¡Vuelo agregado!",
-          description: "Tu vuelo ha sido añadido a la reserva.",
-        })
+        setTimeout(() => {
+          toast({
+            title: "¡Vuelo agregado!",
+            description: "Tu vuelo ha sido añadido a la reserva.",
+          })
+        }, 0);
         return [...prevCart, flight]
     });
   };
